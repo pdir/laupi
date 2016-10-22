@@ -55,7 +55,7 @@
             <div class="modal-body">
                 <table ng-table="laupisTableParams" class="table">
                     <tr ng-repeat="laupi in $data">
-                        <td data-title="'Nr.'" sortable="'verwaltung_techn-objektnr_extern'" class='text-center'>
+                        <td data-title="'Nr.'" class='text-center'>
                             {{laupi['verwaltung_techn-objektnr_extern']}}
                         </td>
                         <td data-title="'Produkt'" class='text-center'>
@@ -68,16 +68,16 @@
                                 <img class='img-responsive img-thumbnail' ng-src="https://www.laupi.de/{{laupi['anhaenge-anhang-#1-daten-pfad']}}" style="max-height: 70px;">
                             </a>
                         </td>
-                        <td data-title="'Eigentumsart'" sortable="'laupi-eigentumsart'" class='text-center'>
+                        <td data-title="'Eigentumsart'" class='text-center'>
                             {{laupi['laupi-eigentumsart']}}
                         </td>
-                        <td data-title="'Grundstück'" sortable="'flaechen-gesamtflaeche'" class='text-center'>
+                        <td data-title="'Grundstück'" class='text-center'>
                             {{laupi['flaechen-gesamtflaeche'] | prettifyNumber: 'm²'}}
                         </td>
-                        <td data-title="'Hausfläche'" sortable="'laupi-hausflaeche'" class='text-center'>
+                        <td data-title="'Hausfläche'" class='text-center'>
                             {{laupi['laupi-hausflaeche'] | prettifyNumber: 'm²'}}
                         </td>
-                        <td data-title="'Preis'" sortable="'preise-kaufpreisbrutto'" class='text-center'>
+                        <td data-title="'Preis'" class='text-center'>
                             {{laupi['preise-kaufpreisbrutto'] | prettifyNumber: '€'}}
                         </td>
                         <td data-title="'Reisezeit'" sortable="'travelTime'" class='text-center'>
@@ -114,16 +114,25 @@
                             <p><img src="images/marker/marker-icon-grey.png" class="icon">Objekte außer Reichweite</p>
                             <p><img src="images/marker/marker-icon-green.png" class="icon">Erreichbare Objekte in der gewählten Reisezeit</p>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-2">
                             <h3>Wege</h3>
                             <p><img src="images/help/line-bahn.png" class="icon"> Bahn</p>
                             <p><img src="images/help/line-bus.png" class="icon"> Bus</p>
                             <p><img src="images/help/line-fahrrad-auto.png" class="icon"> Fahrrad</p>
                             <p><img src="images/help/line-fahrrad-auto.png" class="icon"> Auto</p>
                             <p><img src="images/help/line-sbahn.png" class="icon"> S-Bahn</p>
+                            <p><img src="images/help/line-ubahn.png" class="icon"> U-Bahn</p>
                             <p><img src="images/help/line-zufuss.png" class="icon"> Zu Fuß</p>
                         </div>
+                        <div class="col-md-4">
+                            <h3>Verkehrsarten</h3>
+                            <button class="btn btn-default travel-type-button disabled"><span class="fa fa-male travel-type-icon"></span> <span lang="en" style="display: none;">Walk</span><span lang="no" style="display: none;">Gå</span><span lang="de">zu Fuß</span></button><br />
+                            <button class="btn btn-default travel-type-button disabled" style="margin-top:5px;"><span class="fa fa-bicycle travel-type-icon"></span> <span lang="en" style="display: none;">Bike</span><span lang="no" style="display: none;">Sykle</span><span lang="de">Fahrrad</span></button><br />
+                            <button class="btn btn-default travel-type-button disabled" style="margin-top:5px;margin-bottom: 5px;"><span class="map-icon-train-station travel-type-icon"></span> <span lang="en" style="display: none;">Transit</span><span lang="de" title="">ÖPNV</span></button><br />Öffentlicher Personennahverkehr<br />
+                            <button class="btn btn-default travel-type-button disabled" style="margin-top:5px;"><span class="fa fa-car"></span> <span lang="en" style="display: none;">Car</span><span lang="de">Auto</span></button>
+                        </div>
                     </div>
+
                     <div class="row">
                         <div class="col-md-6">
                             <h3>Fahrzeitermittlung</h3>

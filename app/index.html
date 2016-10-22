@@ -2,10 +2,35 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Umkreissuche - Laupi</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <link rel="shortcut icon" href="/files/03_design/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="/files/03_design/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-precomposed.png">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-57x57.png" sizes="57x57">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-60x60.png" sizes="60x60">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-72x72.png" sizes="72x72">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-76x76.png" sizes="76x76">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-114x114.png" sizes="114x114">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-120x120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-128x128.png" sizes="128x128">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-144x144.png" sizes="144x144">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-152x152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="/files/03_design/images/apple-touch-icon-180x180.png" sizes="180x180">
+    <meta name="msapplication-TileImage" content="/files/03_design/images/win8-tile-144x144.png">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-navbutton-color" content="#50af31">
+    <meta name="application-name" content="Umkreissuche"/>
+    <meta name="msapplication-tooltip" content="Umkreissuche"/>
+    <meta name="apple-mobile-web-app-title" content="Umkreissuche"/>
+    <meta name="msapplication-square70x70logo" content="/files/03_design/images/win8-tile-70x70.png">
+    <meta name="msapplication-square144x144logo" content="/files/03_design/images/win8-tile-144x144.png">
+    <meta name="msapplication-square150x150logo" content="/files/03_design/images/win8-tile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/files/03_design/images/win8-tile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/files/03_design/images/win8-tile-310x310.png">
 
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
@@ -43,7 +68,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="" ng-click="loadHome()">
+          <a class="navbar-brand" href="https://www.laupi.de/" title="Zurück zu laupi.de">
             <img src="images/logo/logo.png" class="img-responsive" style='height: 40px; float: left;margin-top: -10px;' alt="Laupi - Rein ins Grüne"/>
           </a>
         </div>
@@ -51,6 +76,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul id="left-nav-bar" class="nav navbar-nav">
+                <li id='laupi-reset' ng-class='navClass("laupi-reset")'><a href='' ng-click="loadHome()" title="Umkreissuche zurücksetzen"><i class='fa fa-home'></i> <span class="hideme">{{ 'Umkreissuche zurücksetzen'  }}</span></a></li>
                 <li id='laupi-search-edit' ng-class='navClass("laupi-search-edit")'><a href=''><i class='fa fa-search'></i> {{ 'Erweiterte Suche'  }}</a></li>
                 <li id='laupi-results' ng-class='navClass("laupi-results")'><a href=''><i class='fa fa-list-ol'></i> {{ 'Ergebnisliste'  }}</a></li>
                 <li id='laupi-legend' ng-class='navClass("laupi-legend")'><a href=''><i class='fa fa-info'></i> {{ 'Legende'  }}</a></li>

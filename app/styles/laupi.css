@@ -129,6 +129,18 @@
     display: inline-table;
 }
 
+.hideme {
+    display: none;
+}
+
+.collapse.in .hideme {
+    display: inline-block;
+}
+
+.laupi-travel-type-buttons {
+    display:  block!important;
+}
+
 @media (max-width: 720px) {
     .leaflet-top.leaflet-right {
         padding-top: 78px;
@@ -141,6 +153,11 @@
     .autocomplete {
         width: auto !important;
         margin-right: 10px;
+    }
+
+    .laupi-autocomplete {
+        width: auto !important;
+        margin-right: 0;
     }
 
     #laupi-details {
@@ -158,5 +175,19 @@
 
     #laupi-search-edit-modal .multiSelect > button {
         width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+    /* For ipad 1 and 2 portrait layouts only */
+    .modal-dialog {
+        width: 675px;
+    }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 2) {
+    /* For ipad 3 and 4 portrait layouts only */
+    .modal-dialog {
+        width: 755px;
     }
 }
