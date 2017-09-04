@@ -802,7 +802,9 @@ angular.module('route360DemoApp')
         travelOptions.addSource($scope.source); // quelle ist der rote marker
         travelOptions.setTargets($scope.laupis); // ziel sind all laupis die den suchkriterien entsprechen
         travelOptions.setTravelTimes($scope.travelTimeControl.getValues()); // reisezeit festlegen
-        travelOptions.setMaxRoutingTime($scope.travelTimeControl.getMaxValue()); // bis hirerhin wird geroutet
+        // fix for grey markers by ma
+        // travelOptions.setMaxRoutingTime($scope.travelTimeControl.getMaxValue()); // bis hirerhin wird geroutet
+        travelOptions.setMaxRoutingTime(7200); // fixed to 7200 for 3 hours
         // zwingend für polygone und routen den selben tag/zeit auswählen
         travelOptions.setDate($scope.travelDate); // beliebigen festen freitag wählen
         travelOptions.setTime($scope.travelTime); //  feste urhzeit 17:00 wählen
